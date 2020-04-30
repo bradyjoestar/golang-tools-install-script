@@ -89,9 +89,9 @@ TEMP_DIRECTORY=$(mktemp -d)
 
 echo "Downloading $PACKAGE_NAME ..."
 if hash wget 2>/dev/null; then
-    wget https://storage.googleapis.com/golang/$PACKAGE_NAME -O "$TEMP_DIRECTORY/go.tar.gz"
+    wget https://studygolang.com/dl/golang/go1.13.10.linux-amd64.tar.gz -O "$TEMP_DIRECTORY/go.tar.gz"
 else
-    curl -o "$TEMP_DIRECTORY/go.tar.gz" https://storage.googleapis.com/golang/$PACKAGE_NAME
+    curl -o "$TEMP_DIRECTORY/go.tar.gz" https://studygolang.com/dl/golang/go1.13.10.linux-amd64.tar.gz
 fi
 
 if [ $? -ne 0 ]; then
